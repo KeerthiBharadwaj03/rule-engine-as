@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rule Engine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Rule Engine Application</h1>
+        <form id="ruleForm">
+            <label for="rule">Rule (e.g., age > 18 AND income >= 50000):</label><br>
+            <input type="text" id="rule" name="rule" placeholder="Enter rule"><br><br>
+
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age" placeholder="Enter age"><br><br>
+
+            <label for="income">Income:</label><br>
+            <input type="number" id="income" name="income" placeholder="Enter income"><br><br>
+
+            <label for="department">Department (optional):</label><br>
+            <input type="text" id="department" name="department" placeholder="Enter department"><br><br>
+
+            <button type="submit">Submit Rule</button>
+        </form>
+
+        <div id="output"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
